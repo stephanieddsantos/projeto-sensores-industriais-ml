@@ -1,34 +1,3 @@
-# 🤖 **VAMOS CRIAR A PARTE DE MACHINE LEARNING JUNTOS!**
-
-Perfeito! Vamos completar os **10% restantes** para atingir **100% dos requisitos**! 🎯
-
----
-
-## 📋 **PLANO DE AÇÃO:**
-
-1. ✅ **Criar dataset de sensores** (CSV com 500+ registros)
-2. ✅ **Implementar modelo de ML** (classificação de temperatura)
-3. ✅ **Gerar visualizações** (gráficos e matriz de confusão)
-4. ✅ **Documentar resultados**
-
----
-
-## 🚀 **PASSO 1: Criando o Dataset de Sensores**
-
-### **O que você precisa fazer AGORA:**
-
-1. **Volte para a página principal** do seu repositório
-
-2. **Clique em \\\"Add file\\\"** → **\\\"Create new file\\\"**
-
-3. **No campo \\\"Name your file\\\"**, digite exatamente:
-   ```
-   data/sensor_data_sample.csv
-   ```
-
-4. **Na área de texto grande**, copie e cole este dataset (são 600 registros de sensores):
-
-```csv
 timestamp,sensor_id,equipment_id,temperature,humidity,pressure,vibration,current,status
 2024-01-01 00:00:00,1,101,22.5,45.2,1.013,0.05,12.3,NORMAL
 2024-01-01 00:01:00,1,101,22.7,45.1,1.014,0.06,12.4,NORMAL
