@@ -240,22 +240,7 @@ Conteúdo do Vídeo:
 2:30 - Modelos de Machine Learning
 4:00 - Resultados e conclusões
 4:45 - Próximos passos
-👥 Equipe de Desenvolvimento
-[Seu Nome] - Modelagem de Dados e Machine Learning
-[Nome do Colega 2] - Desenvolvimento Backend
-[Nome do Colega 3] - Análise de Dados e Visualizações
-�� Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-🤝 Contribuições
-Contribuições são bem-vindas! Por favor, leia as diretrizes de contribuição antes de submeter pull requests.
-
-📞 Contato
-Email: seu.email@faculdade.edu.br
-LinkedIn: 
-
-linkedin.com
-GitHub: 
 
 github.com
 Projeto desenvolvido para o Desafio Hermes Reply - Fase 5
