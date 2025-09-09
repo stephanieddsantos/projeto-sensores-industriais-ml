@@ -115,7 +115,7 @@ CREATE TABLE TIPO_SENSOR (
     valor_min_operacao NUMBER(12,4),
     valor_max_operacao NUMBER(12,4),
     precisao_decimal NUMBER(2) DEFAULT 2,
-    frequencia_leitura_padrao NUMBER(6) DEFAULT 60, -- em segundos
+    frequencia_leitura_padrao NUMBER(6) DEFAULT 60,
     descricao_tecnica VARCHAR2(500),
     fabricante_padrao VARCHAR2(100),
     protocolo_comunicacao VARCHAR2(50),
@@ -211,15 +211,12 @@ CREATE TABLE ALERTA (
 -- ÍNDICES PARA OTIMIZAÇÃO
 -- =====================================================
 
--- Índices para consultas frequentes
 CREATE INDEX idx_leitura_sensor_timestamp ON LEITURA_SENSOR(id_sensor, timestamp_leitura);
 CREATE INDEX idx_leitura_timestamp ON LEITURA_SENSOR(timestamp_leitura);
 CREATE INDEX idx_sensor_equipamento ON SENSOR(id_equipamento);
 CREATE INDEX idx_equipamento_setor ON EQUIPAMENTO(id_setor);
 CREATE INDEX idx_alerta_timestamp ON ALERTA(timestamp_alerta);
 CREATE INDEX idx_alerta_status ON ALERTA(status_alerta);
-
--- Índices compostos para relatórios
 CREATE INDEX idx_sensor_tipo_status ON SENSOR(id_tipo_sensor, status_sensor);
 CREATE INDEX idx_equipamento_status ON EQUIPAMENTO(status_operacional, id_setor);
 
@@ -227,22 +224,17 @@ CREATE INDEX idx_equipamento_status ON EQUIPAMENTO(status_operacional, id_setor)
 -- TRIGGERS PARA AUDITORIA E VALIDAÇÃO
 -- =====================================================
 
--- Trigger para calcular valor corrigido automaticamente
 CREATE OR REPLACE TRIGGER trg_calcula_valor_corrigido
     BEFORE INSERT OR UPDATE ON LEITURA_SENSOR
     FOR EACH ROW
 DECLARE
     v_fator_correcao NUMBER;
 BEGIN
-    -- Busca o fator de correção do sensor
     SELECT fator_correcao INTO v_fator_correcao
     FROM SENSOR
     WHERE id_sensor = :NEW.id_sensor;
     
-    -- Calcula o valor corrigido
     :NEW.valor_corrigido := :NEW.valor_medido * v_fator_correcao;
-    
-    -- Gera checksum simples
     :NEW.checksum_dados := SUBSTR(STANDARD_HASH(:NEW.id_sensor || :NEW.timestamp_leitura || :NEW.valor_medido, 'MD5'), 1, 32);
 END;
 /
@@ -251,7 +243,6 @@ END;
 -- VIEWS PARA CONSULTAS FREQUENTES
 -- =====================================================
 
--- View para dashboard principal
 CREATE OR REPLACE VIEW vw_dashboard_sensores AS
 SELECT 
     e.nome_equipamento,
@@ -289,7 +280,3 @@ COMMENT ON TABLE SENSOR IS 'Sensores físicos instalados nos equipamentos';
 COMMENT ON TABLE PARAMETRO_OPERACIONAL IS 'Parâmetros operacionais e limites para cada sensor';
 COMMENT ON TABLE LEITURA_SENSOR IS 'Dados coletados pelos sensores (tabela principal de dados)';
 COMMENT ON TABLE ALERTA IS 'Alertas gerados automaticamente baseados nos parâmetros operacionais';
-
--- =====================================================
--- SCRIPT FINALIZADO
--- =====================================================
