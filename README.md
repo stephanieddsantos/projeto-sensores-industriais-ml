@@ -1,4 +1,4 @@
-# �� Sistema de Monitoramento Industrial com Sensores IoT e Machine Learning
+# Sistema de Monitoramento Industrial com Sensores IoT e Machine Learning
 
 ![Python](https://img.shields.io/badge/python-v3.9+-blue.svg)
 ![Oracle](https://img.shields.io/badge/oracle-19c-red.svg)
@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/status-completed-brightgreen.svg)
 ![Challenge](https://img.shields.io/badge/challenge-hermes%20reply-purple.svg)
 
-## �� Descrição do Projeto
+## Descrição do Projeto
 
 Este projeto foi desenvolvido como parte do **Desafio Hermes Reply - Fase 5**, focando na criação de um sistema completo de monitoramento industrial que integra:
 
@@ -337,7 +337,7 @@ Conteúdo Planejado:
 📁 Estrutura do Projeto
 projeto-sensores-industriais-ml/
 ├── 📋 README.md
-├── �� data/
+├── � data/
 │   ├── sensor_data_sample.csv
 │   └── README.md
 ├── 🗄️ database/
@@ -355,5 +355,4 @@ projeto-sensores-industriais-ml/
 Desenvolvido para: Hermes Reply Challenge 2025
 Instituição: FIAP
 Repositório: 
-
 github.com
