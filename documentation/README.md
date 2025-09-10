@@ -90,18 +90,6 @@ Commit → Tests → Build → Security Scan → Deploy to Staging → Tests E2E
 - **Staging**: Réplica do ambiente de produção
 - **Production**: Ambiente final dos usuários
 
-## 📞 Suporte e Contatos
-
-### Equipe Técnica
-- **Tech Lead**: João Silva (joao.silva@empresa.com)
-- **DevOps**: Maria Santos (maria.santos@empresa.com)
-- **QA Lead**: Pedro Costa (pedro.costa@empresa.com)
-
-### Canais de Suporte
-- **Email**: suporte.iot@empresa.com
-- **Slack**: #iot-monitoring-support
-- **Telefone**: +55 11 9999-9999 (24/7)
-- **Portal**: https://suporte.empresa.com
 
 ## 📋 Changelog
 
