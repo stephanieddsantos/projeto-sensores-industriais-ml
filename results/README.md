@@ -81,7 +81,7 @@ Esta pasta contém todos os resultados, análises e relatórios gerados pelo sis
 - **Detecção de Anomalias**: 97.8% de sensibilidade
 - **Otimização Energética**: 15% de economia alcançada
 
-## �� Frequência de Atualização
+## Frequência de Atualização
 
 - **Dashboards**: Tempo real (refresh a cada 30s)
 - **Relatórios Diários**: Gerados às 06:00
