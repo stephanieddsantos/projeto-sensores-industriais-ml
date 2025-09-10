@@ -102,7 +102,17 @@ Este projeto foi desenvolvido como parte do **Desafio Hermes Reply - Fase 5**, f
 ## 🗄️ Modelagem do Banco de Dados
 
 ### Diagrama Entidade-Relacionamento
-![Diagrama ER](docs/diagrama_er.png)
+📊 ESTRUTURA DO BANCO DE DADOS
+
+┌─────────────┐ ┌──────────────────┐ ┌─────────────────┐ │ EMPRESA │────│ UNIDADE_FABRIL │────│ SETOR │ │ │ │ │ │ │ │ id_empresa │ │ id_unidade │ │ id_setor │ │ razao_social│ │ id_empresa (FK) │ │ id_unidade (FK) │ │ cnpj │ │ nome_unidade │ │ nome_setor │ │ endereco │ │ capacidade │ │ tipo_processo │ └─────────────┘ └──────────────────┘ └─────────────────┘ │ ┌─────────────────┐ │ EQUIPAMENTO │ │ │ │ id_equipamento │ │ id_setor (FK) │ │ numero_serie │ │ status_oper │ └─────────────────┘ │ ┌─────────────────┐ │ SENSOR │ │ │ │ id_sensor │ │ id_equipam (FK) │ │ tipo_sensor │ │ localizacao │ └─────────────────┘ │ ┌─────────────────┐ │ LEITURA_SENSOR │ │ │ │ id_leitura │ │ id_sensor (FK) │ │ timestamp │ │ valor_medido │ │ valor_corrigido │ │ status_leitura │ └─────────────────┘
+
+
+**Relacionamentos:**
+- 1 EMPRESA → N UNIDADES_FABRIS
+- 1 UNIDADE → N SETORES  
+- 1 SETOR → N EQUIPAMENTOS
+- 1 EQUIPAMENTO → N SENSORES
+- 1 SENSOR → N LEITURAS
 
 ### Principais Entidades
 
@@ -190,7 +200,15 @@ Dados coletados pelos sensores - Particionada por data
 ## 📈 Resultados e Visualizações
 
 ### Dashboard Principal
-![Dashboard](docs/dashboard_preview.png)
+
+> 📊 **Dashboard em Desenvolvimento**: Interface web será disponibilizada em breve!
+
+**Funcionalidades Planejadas:**
+- 📈 Gráficos em tempo real dos sensores
+- 🚨 Alertas automáticos por criticidade  
+- 📊 Métricas de performance dos equipamentos
+- 🔍 Filtros por setor, equipamento e período
+- �� Interface responsiva para mobile
 
 ### Gráficos de Performance
 
