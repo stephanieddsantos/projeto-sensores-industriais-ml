@@ -259,7 +259,7 @@ class PredictiveMaintenance:
             # Probabilidades
             probabilities = self.model.predict_proba(pred_features)[0]
             
-            print(f"\n�� Exemplo {i+1}:")
+            print(f"\n🔧 Exemplo {i+1}:")
             print(f"• Temperatura: {real_features['temperature']:.1f}°C")
             print(f"• Umidade: {real_features['humidity']:.1f}%")
             print(f"• Pressão: {real_features['pressure']:.3f} bar")
